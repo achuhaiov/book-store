@@ -11,7 +11,7 @@
     <groupId>com.store</groupId>
     <artifactId>book-store</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>book-store</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -84,12 +84,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
+                    <mainClass>com.store.BookStoreApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
