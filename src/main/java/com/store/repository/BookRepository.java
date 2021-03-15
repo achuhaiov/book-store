@@ -18,7 +18,8 @@ public class BookRepository {
             "SELECT * FROM book WHERE isbn = :isbn";
 
     private static final String SQL_UPDATE_AVAILABLE_QUANTITY =
-            "UPDATE book SET available_quantity = available_quantity - :quantity WHERE id = :bookId";
+            "UPDATE book SET available_quantity = available_quantity - :quantity " +
+                    "WHERE id = :bookId AND available_quantity >= :quantity";
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
